@@ -213,6 +213,49 @@
 }
 
 
+
+
+
+
+
+#textoSloganSenacHub{
+     
+    margin-top: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#textoSloganSenacHub h1{
+
+    font-size: 50px;    
+    text-align: center;
+    width: 90%;
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--yellow1);
+}
+
+#textoSloganSenacHub p{
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    width: 70%;
+    color: var(--orange1);
+    font-size: 30px;  
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:1200px) {
 
     .areaTextCardAdm .marcaDagua{
@@ -291,6 +334,19 @@
         right: 10%;
         top: 10%;
     }
+
+    #textoSloganSenacHub h1{
+
+        font-size: 34px;    
+        
+    }
+    
+    #textoSloganSenacHub p{
+        
+        font-size: 22px;  
+    }
+    
+    
 }
 
 @media (max-width:600px) {

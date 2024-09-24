@@ -65,19 +65,19 @@ palestras_cards.forEach(e => {
 
     const id_palestra = e.getAttribute("palestra_id") 
     e.addEventListener('click',() => { 
-        abrirModalSubscribe(dataPalestras[id_palestra]) 
+        abrirModalSubscribe(dataPalestras[id_palestra],id_palestra) 
     }) 
 
 })
 const modalSubscribe = document.querySelector('.modalSubscribePalestra')
 
-const abrirModalSubscribe = (data) => {  
+const abrirModalSubscribe = (data, idPalestra) => {  
     
-    setDataModal(data)  
+    setDataModal(data,idPalestra)  
     modalSubscribe.classList.add("active")
 
 }
-const setDataModal = (data) => {
+const setDataModal = (data, idP) => {
 
     const img_card_palestra = document.getElementById("img_card_palestraModal")
     const titleCardPalestraSubscribe = document.getElementById("titleCardPalestraSubscribe")
@@ -87,6 +87,7 @@ const setDataModal = (data) => {
     const subtitleHeaderSubscribe = document.getElementById("subtitleHeaderSubscribe")
     const aboutPalestraSubscribe = document.getElementById("aboutPalestraSubscribe")
     const nomePalestranteSubscribe = document.getElementById("nomePalestranteSubscribe") 
+    const btnToSubscribeModalSimao100 = document.getElementById("btnToSubscribeModalSimao100")
 
     img_card_palestra.src = data.srcImagemPalestra
     titleCardPalestraSubscribe.innerText = data.titlePalestra
@@ -96,6 +97,11 @@ const setDataModal = (data) => {
     subtitleHeaderSubscribe.innerText = data.subtitlePalestra
     aboutPalestraSubscribe.innerText =  data.descPalestra
     nomePalestranteSubscribe.innerText = data.palestrante.nome 
+    btnToSubscribeModalSimao100.addEventListener('click',(e) => {
+
+        window.location.href = "inscricao.html?id_palestra="+idP
+
+    })
 
 }
 
@@ -144,3 +150,24 @@ const yParte = document.getElementById("yParte")
 buttonAreaHamburguerNavBar.addEventListener("click",() => { 
     yParte.classList.toggle("active") 
 }) 
+
+
+
+const observer = new IntersectionObserver(
+    (entries) => {
+
+    entries.forEach((entry) => {
+
+    if(entry.isIntersecting){
+        entry.target.classList.add('show');
+    }
+    else{
+        entry.target.classList.remove('show')
+    }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.move')
+hiddenElements.forEach((element) => {
+    observer.observe(element)
+})

@@ -1,7 +1,6 @@
 .admsSenac{
-    position: relative;
-    height: 100vh;
-    height: 100dvh;
+    position: relative; 
+    min-height: 100dvh;
     padding: 50PX;
     background-color: var(--grey1);
 }
@@ -60,7 +59,7 @@
     object-fit: cover; 
 }
 .areaTextCardAdm{
-
+    
     color: white;
     display: flex;
     flex-direction: column;
@@ -68,11 +67,19 @@
     padding-left: 50px; 
     position: relative;
     
+    
+}
+.areaTextCardAdm h2{
+
+    min-width: 150px;
+
 }
 .areaTextCardAdm .titleCard{
     
     font-size: 150px;
-    font-family: "Impact";
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
     
 }
 .areaTextCardAdm .marcaDagua{
@@ -80,13 +87,16 @@
     font-size: 300px;
     left: -10%;
     top: -25%;
-  font-weight: bold;
-  color: transparent; /* Faz o texto ficar transparente */
-  -webkit-text-stroke: 0.01px rgba(255, 255, 255, 0.164); /* Cria o contorno branco nas letras */
-  text-shadow: none; /* Remover qualquer sombra de texto */
-  position: absolute;
-  font-family: "Impact";
-font-weight: 600;
+   
+    color: transparent;  
+    -webkit-text-stroke: 0.01px rgba(255, 255, 255, 0.164);  
+    text-shadow: none;  
+    position: absolute;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    
+    
     
 }
 .bubblebgAdms{
@@ -291,7 +301,10 @@ font-weight: 600;
     .card2Adm,.card1Adm{
         width: 90%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+    }
+    .areaTextCardAdm  {
+        padding-left: 10px;
     }
     .areaTextCardAdm .marcaDagua {
         font-size: 60px;

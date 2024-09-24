@@ -2,6 +2,7 @@
 
     width: 100%;
     height: 100vh;
+    min-height: 800px;
     position: relative;
     height: 100dvh;
     background-color: var(--grey1);
@@ -52,12 +53,18 @@
 }
 .areaAboutHomeText h1{
 
-    font-size: 60px;
+    font-size: 68px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 
 }
 .areaAboutHomeText h2{
 
     font-size: 45px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 
 }.areaAboutHomeText h3{
 
@@ -92,7 +99,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 70% 55% 60% 50% ; /* Define a distorção da bolha */
+    border-radius: 70% 55% 60% 50% ; 
     position: absolute;
     right: 0%;
     bottom: 10%;
@@ -206,6 +213,9 @@ margin-top: 9px;
 
     .bubble1{
         display: none;
+    }
+    .backgroundHomeRounded{
+        min-height: 670px;
     }
     
 }

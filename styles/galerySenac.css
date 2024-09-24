@@ -1,6 +1,6 @@
 .galerySenacHub{
 
-    min-height: 100dvh;
+    min-height: 1000px;
     background-color: var(--grey1);
     margin-top: 200px;  
     width: 100%;
@@ -27,27 +27,31 @@
 } 
 .imgGal{
     position: absolute;
-    height: 350px;
-    width: 310px;
+    height: 268px;
+    width: 251px;
     background-color: white;
     object-fit: cover;
     -webkit-transform:  skew(-10deg);
     -moz-transform:  skew(-10deg);
     -o-transform:  skew(-10deg); 
-    border-radius: 50px; 
+    border-radius: 50px;  
 }    
 .bubbleGal { 
     position: absolute; 
+    
 }
 
 /* ================== imgGal1 =================== */ 
 .imgGal1{
     left: 5%;
     top: 20%;
+    
+     
 }
 .imgGal2{
     left: 15%;
     top: 50%; 
+    
 }
 .imgGal3{
     left: 30%;
@@ -78,49 +82,61 @@
 /* ================== bubbleGal1 =================== */ 
 
 .bubbleGal1{
+    animation: bubbleAnimation 20s ease-in infinite alternate-reverse;
     left: -5%;
     top: 35%;
     border-radius: 60% 80% 90% 80% ; 
     height:370px;
     width: 370px;
     background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));   
+    rotate: 10deg;
 }
 .bubbleGal2{
+    animation: bubbleAnimation 15s ease-in infinite alternate-reverse;
     left: 5%;
     top: 55%;
     border-radius: 50% 90% 80% 90% ; 
     height:370px;
     width: 370px;
-    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));    
+    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));  
+    rotate: 20deg;  
 }
 .bubbleGal3{
+    animation: bubbleAnimation 28s linear infinite alternate-reverse;
     left: 22%;
     top: 25%;
     border-radius: 60% 60% 80% 80% ; 
     height:370px;
     width: 370px;
-    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));     
+    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));  
+    rotate: 30deg;   
+
 }
 .bubbleGal4{
+    animation: bubbleAnimation 30s ease-out infinite alternate-reverse;
     left: 45%;
     top: 25%;
     rotate: 120deg;
     border-radius: 90% 90% 60% 80% ; 
     height:240px;
     width: 240px;
-    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));   
+    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));  
+    rotate: 60deg;
 }
 
 .bubbleGal5{
+    animation: bubbleAnimation 14s ease-in-out infinite alternate-reverse;
     right: 25%;
     top: 10%;
     rotate: 120deg;
     border-radius: 60% 90% 70% 90% ; 
     height:370px;
     width: 370px;
-    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));   
+    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));  
+    rotate: 20deg; 
 }
 .bubbleGal6{
+    animation: bubbleAnimation 10s ease-in infinite alternate-reverse;
     right: -2%;
     top: 5%;
     rotate: 120deg;
@@ -128,8 +144,10 @@
     height:370px;
     width: 370px;
     background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));  
+    rotate: 100deg;
 }
 .bubbleGal7{
+    animation: bubbleAnimation 26s ease-in-out infinite alternate-reverse;
     right: 3%;
     top: 30%;
     rotate: 120deg;
@@ -137,15 +155,18 @@
     height:370px;
     width: 370px;
     background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));  
+    rotate: 120deg;
 }
 .bubbleGal8{
+    animation: bubbleAnimation 12s linear infinite alternate-reverse;
     right: 3%;
     bottom: 5%;
     rotate: 120deg;
     border-radius: 90% 90% 70% 40% ; 
     height:370px;
     width: 370px;
-    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1));  
+    background-image: linear-gradient(200deg,var(--orange1),var(--yellow1)); 
+    rotate: 133deg; 
 } 
 
 @media (max-width:1200px) {
@@ -210,9 +231,9 @@
 @media (max-width:680px) {
 
     .imgGal{ 
-        -webkit-transform: scale(0.5)  skew(-10deg);
-        -moz-transform: scale(0.5)  skew(-10deg);
-        -o-transform: scale(0.5)  skew(-10deg);  
+        -webkit-transform: scale(0.7)  skew(-10deg);
+        -moz-transform: scale(0.7)  skew(-10deg);
+        -o-transform: scale(0.7)  skew(-10deg);  
     }
 
 }
@@ -230,4 +251,10 @@
     .bubbleGal3,.bubbleGal5,.bubbleGal7{ 
         display: none; 
     }   
+}
+
+@media(max-height: 700px) and (max-width: 1300px){
+
+
+
 }
